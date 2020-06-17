@@ -45,7 +45,8 @@ export default class SearchBox extends Component {
     render() {
         return (
             <div className = {styles.searchbox}>
-               <ReactSearchBox 
+                <label className={styles.label}>Search your city</label>
+               <ReactSearchBox
                 placeholder="States"
                 value=""
                 data={this.data}
