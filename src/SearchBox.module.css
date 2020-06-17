@@ -13,7 +13,11 @@
       text-align: center;
       margin-bottom:0.75rem;
   }
-  
+  .date_time{
+    display: block;
+    text-align: center;
+    margin-top:0.75rem; 
+  }
   @media(max-width:770px){
     .searchbox {
         margin: 2% auto !important;

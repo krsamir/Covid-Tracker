@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import ReactSearchBox from 'react-search-box'
 import styles from './SearchBox.module.css'; 
+import date from 'date-and-time';
 
-export default class SearchBox extends Component {
+const date_time =()=>{
+    const now = new Date();
+    const time_view=date.format(now, 'YYYY/MM/DD HH:mm:ss');
+    return time_view;    
+}
+
+export default class SearchBox extends Component { 
     data = [
         {
             key: 'An',
@@ -41,7 +48,6 @@ export default class SearchBox extends Component {
             value: 'Himachal Pradesh'
         }
     ]
-
     render() {
         return (
             <div className = {styles.searchbox}>
@@ -54,6 +60,7 @@ export default class SearchBox extends Component {
                 inputBoxFontColor = "Red"
                 dropDownHoverColor = "grey"
             /> 
+            <label className={styles.date_time}>{date_time()}</label>
             </div>
             
         )
