@@ -1,0 +1,15 @@
+.searchbox {
+    margin: 0px auto;
+    border:  0px auto ;
+    padding: 0px;
+    height: 500px;
+    width: 250px;
+    color: red;
+    justify-content: center;
+    align-content: center;
+  }
+  @media(max-width:770px){
+    .searchbox {
+        margin: 2% auto !important;
+    }
+} 

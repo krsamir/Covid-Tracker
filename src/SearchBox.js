@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ReactSearchBox from 'react-search-box'
+import styles from './SearchBox.module.css'; 
 
-export default class App extends Component {
+export default class SearchBox extends Component {
     data = [
         {
             key: 'An',
@@ -43,12 +44,17 @@ export default class App extends Component {
 
     render() {
         return (
-            <ReactSearchBox
+            <div className = {styles.searchbox}>
+               <ReactSearchBox 
                 placeholder="States"
                 value=""
                 data={this.data}
                 onSelect={record => console.log(record)}
-            />
+                inputBoxFontColor = "Red"
+                dropDownHoverColor = "grey"
+            /> 
+            </div>
+            
         )
     }
     // reference: https://www.npmjs.com/package/react-search-box
