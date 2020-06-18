@@ -1,0 +1,18 @@
+.container{
+    margin: 0px 0!important;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.gridbox{
+    
+    margin: 5px 5px!important;
+    padding: 5px 5px !important;
+    border: 5px 5px !important;
+    
+}
+@media(max-width:770px){
+    .card {
+        margin: 2% 0 !important;
+    }
+} 

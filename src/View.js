@@ -1,9 +1,8 @@
 import React from 'react';
-import './View.css'
 const View = () => {
     return (    
         <div>
-
+            <h1>Hello</h1>
         </div>
 
     )
