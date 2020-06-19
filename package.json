@@ -12,12 +12,8 @@
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-scripts": "^3.4.1"
-=======
     "react-scripts": "3.4.1",
     "react-search-box": "^2.0.2"
->>>>>>> 8a5cd54a834ebaac1c1c5c71ef8ece080eff1db7
   },
   "homepage": "https://krsamir.github.io/Covid-Tracker/",
   "scripts": {
