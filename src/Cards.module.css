@@ -1,13 +1,13 @@
 .container{
-    margin: 0px 0px!important;
     display:flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;  */
     justify-content: space-around;
 } 
 .gridbox{
+    
     box-shadow: 10px 8px 10px 8px #888888; 
-    margin: 30px 30px!important;
-    border: 10px 10px !important;
+    margin: 10px 10px!important;
+    border: 10px 10px !important; 
     
 }
 @media(max-width:770px){
