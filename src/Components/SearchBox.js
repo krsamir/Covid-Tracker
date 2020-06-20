@@ -64,8 +64,7 @@ export default class SearchBox extends Component {
             /> 
             <label className={styles.date_time}>{date_time()}</label>
             <Cards/>
-            </div>
-            
+            </div>   
             </div>
         )
     }
