@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactSearchBox from 'react-search-box'
 import styles from './SearchBox.module.css'; 
 import date from 'date-and-time';
+import Cards from './Cards'
 
 const date_time =()=>{
     const now = new Date();
@@ -50,6 +51,7 @@ export default class SearchBox extends Component {
     ]
     render() {
         return (
+            <div>
             <div className = {styles.searchbox}>
                 <label className={styles.label}>Search your city</label>
                <ReactSearchBox
@@ -61,8 +63,10 @@ export default class SearchBox extends Component {
                 dropDownHoverColor = "grey"
             /> 
             <label className={styles.date_time}>{date_time()}</label>
+            <Cards/>
             </div>
             
+            </div>
         )
     }
     // reference: https://www.npmjs.com/package/react-search-box
