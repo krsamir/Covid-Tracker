@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import ReactSearchBox from 'react-search-box'
 import styles from './SearchBox.module.css'; 
 import date from 'date-and-time';
-import Cards from './Cards'
+import Cards from './Cards';
+import {fetchData} from './api/api';
+import { fetchINDIA } from './api/api';
 
 const date_time =()=>{
     const now = new Date();
@@ -49,6 +51,18 @@ export default class SearchBox extends Component {
             value: 'Himachal Pradesh'
         }
     ]
+    state={	
+        data1:{},
+        countryData:{},
+    }
+    async componentDidMount () {
+        const fetchedData = await fetchData();
+        const indiaData=await fetchINDIA();
+        this.setState({
+            data1: fetchedData,
+            countryData: indiaData
+        })
+    }
     render() {
         return (
             <div>
@@ -63,7 +77,8 @@ export default class SearchBox extends Component {
                 dropDownHoverColor = "grey"
             /> 
             <label className={styles.date_time}>{date_time()}</label>
-            <Cards/>
+            <Cards data1={this.state.data1} /> 
+            {/* countryData={this.state.countryData}/> */}
             </div>   
             </div>
         )
