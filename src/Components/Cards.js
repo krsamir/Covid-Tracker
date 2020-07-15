@@ -4,14 +4,22 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import styles from './Cards.module.css'
 import CountUp from 'react-countup'
-import { Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core'; 
+import Cured_cases from '../images/Cured_cases.png';
+import active_cases from '../images/active_cases.png';
+import death_cases from '../images/death_cases.png';
+import migrated_cases from '../images/migrated_cases.png';
 
-export default function Cards({data1:{confirmed,recovered,deaths,lastUpdate}}) {
+export default function Cards({data_cases:{confirmed,recovered,deaths,lastUpdate}}) {
+  if(!confirmed){
+    return (<h1>Loading</h1>);
+  }
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
       <Grid className={styles.gridbox}>
         <Card className={styles.classes}>
           <CardContent>
+          <img src={migrated_cases} alt="Confirmed Cases" />
             <Typography className={styles.title} color="textSecondary" gutterBottom>
               Confirmed Cases
               </Typography>
@@ -33,6 +41,7 @@ export default function Cards({data1:{confirmed,recovered,deaths,lastUpdate}}) {
       <Grid className={styles.gridbox}>
         <Card className={styles.classes}>
           <CardContent>
+          <img src={active_cases} alt="Active Cases" />
             <Typography className={styles.title} color="textSecondary" gutterBottom>
               Active Cases
               </Typography>
@@ -54,6 +63,7 @@ export default function Cards({data1:{confirmed,recovered,deaths,lastUpdate}}) {
       <Grid className={styles.gridbox}>
         <Card className={styles.classes}>
           <CardContent>
+          <img src={Cured_cases} alt="Recovered Cases" />
             <Typography className={styles.title} color="textSecondary" gutterBottom>
               Recovered Cases
               </Typography>
@@ -76,6 +86,7 @@ export default function Cards({data1:{confirmed,recovered,deaths,lastUpdate}}) {
       <Grid className={styles.gridbox}>
         <Card className={styles.classes}>
           <CardContent>
+          <img src={death_cases} alt="Death Cases" />
             <Typography className={styles.classes} color="textSecondary" gutterBottom>
               Death Cases
               </Typography>

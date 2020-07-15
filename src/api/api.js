@@ -1,25 +1,30 @@
-import axios from 'axios';
-const url = 'https://covid19.mathdro.id/api';
-export const fetchData=async(country)=>{
-    let changeableUrl = url;
-    if (country) {
-        changeableUrl = `${url}/countries/${country}`
-    }
-    try {
-        const {data: {confirmed,recovered,deaths,lastUpdate}} = await axios.get(changeableUrl);
-        const modifiedData = {
-            confirmed ,
-            recovered,
-            deaths,
-            lastUpdate
-        }
-        return modifiedData;
-    } catch (error) {
-        console.log(error)
-    }
-}
+import axios from "axios";
+//const url = 'https://covid19.mathdro.id/api';
+const url = "https://covid19.mathdro.id/api/countries/india";
+export const fetchData = async () => {
+  let changeableUrl = url;
+  // if (country) {
+  //     changeableUrl = `${url}/countries/${country}`
+  // }
+  try {
+    const {
+      data: { confirmed, recovered, deaths, lastUpdate }
+    } = await axios.get(changeableUrl);
+    const modifiedData = {
+      confirmed,
+      recovered,
+      deaths,
+      lastUpdate,
+    };
+    return modifiedData;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+/*
 export const fetchINDIA=async()=>{
-    const urlc=`${url}/countries/INDIA/confirmed`
+    const urlc=`${url}/countries/INDIA/confirmed` 
     try{
         const {dataI}= await axios.get(urlc);
         const IndiaData=dataI.map((dataconf)=>({
@@ -78,3 +83,4 @@ export const fetchCountry=async(country)=>{
         console.log(error)
     }
 }
+*/
