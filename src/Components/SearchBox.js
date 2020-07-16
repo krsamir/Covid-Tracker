@@ -4,7 +4,6 @@ import styles from "./SearchBox.module.css";
 import date from "date-and-time";
 import Cards from "./Cards";
 import { fetchData } from "../api/api";
-import View from ".././View";
 
 const date_time = () => {
   const now = new Date();

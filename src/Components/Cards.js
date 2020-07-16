@@ -18,8 +18,8 @@ export default function Cards({
   }
   return (
     <div>
-      <div className={styles.container}>
-        <Grid className={styles.gridbox}>
+      <div className="flex justify-around" >
+        <Grid className={styles.gridbox} style={{position:'relative'}} >
           <Card className={styles.classes}>
             <CardContent>
               <img src={migrated_cases} alt="Confirmed Cases" />
@@ -38,12 +38,12 @@ export default function Cards({
                   separator=","
                 />
               </Typography>
-              <Typography className={styles.pos} color="textSecondary">
+             {/* <Typography className={styles.pos} color="textSecondary">
                 Last Updated Time
               </Typography>
-              <Typography color="textSecondary">
+               <Typography color="textSecondary">
                 {new Date(lastUpdate).toDateString()}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </Card>
         </Grid>
@@ -66,12 +66,12 @@ export default function Cards({
                   separator=","
                 />
               </Typography>
-              <Typography className={styles.pos} color="textSecondary">
+              {/* <Typography className={styles.pos} color="textSecondary">
                 Last Updated Time
-              </Typography>
+              </Typography> 
               <Typography color="textSecondary">
                 {new Date(lastUpdate).toDateString()}
-              </Typography>
+              </Typography>*/}
             </CardContent>
           </Card>
         </Grid>
@@ -94,12 +94,12 @@ export default function Cards({
                   separator=","
                 />
               </Typography>
-              <Typography className={styles.pos} color="textSecondary">
+             {/* <Typography className={styles.pos} color="textSecondary">
                 Last Updated Time
               </Typography>
-              <Typography color="textSecondary">
+               <Typography color="textSecondary">
                 {new Date(lastUpdate).toDateString()}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </Card>
         </Grid>
@@ -123,18 +123,23 @@ export default function Cards({
                   separator=","
                 />
               </Typography>
-              <Typography className={styles.pos} color="textSecondary">
+              {/* <Typography className={styles.pos} color="textSecondary">
                 Last Updated Time
               </Typography>
               <Typography color="textSecondary">
                 {new Date(lastUpdate).toDateString()}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </Card>
         </Grid>
         {/* <label className={styles.date_time}>
         {new Date(lastUpdate).toDateString()}
       </label> */}
+      </div>
+      <div>
+        <h5 className= "tr flex ">LastUpdate : <label className={styles.date_time}>
+        {new Date(lastUpdate).toDateString()}
+      </label> </h5>
       </div>
     </div>
   );
