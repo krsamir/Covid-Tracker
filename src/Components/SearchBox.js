@@ -4,6 +4,7 @@ import styles from "./SearchBox.module.css";
 import date from "date-and-time";
 import Cards from "./Cards";
 import { fetchData } from "../api/api";
+import {state_data} from './state_list';
 
 const date_time = () => {
   const now = new Date();
@@ -12,44 +13,6 @@ const date_time = () => {
 };
 
 export default class SearchBox extends Component {
-  data = [
-    {
-      key: "An",
-      value: "Andhra Pradesh",
-    },
-    {
-      key: "Ar",
-      value: "Arunachal Pradesh",
-    },
-    {
-      key: "As",
-      value: "Assam",
-    },
-    {
-      key: "Bi",
-      value: "Bihar",
-    },
-    {
-      key: "Ch",
-      value: "Chhattisgarh",
-    },
-    {
-      key: "Go",
-      value: "Goa",
-    },
-    {
-      key: "Gu",
-      value: "Gujrat",
-    },
-    {
-      key: "Ha",
-      value: "Haryana",
-    },
-    {
-      key: "Hi",
-      value: "Himachal Pradesh",
-    },
-  ];
   constructor() {
     super();
     this.state = {
@@ -58,13 +21,20 @@ export default class SearchBox extends Component {
     };
   }
   async componentDidMount() {
-    const fetchedData = await fetchData();
+    try {
+      const fetchedData = await fetchData();
     // const indiaData=await fetchINDIA();
     this.setState({
-      data_cases: fetchedData,
+      data_cases: fetchedData
       // countryData: indiaData
     });
+      
+    } catch (error) {
+      console.log(error);
+    }
+    
   }
+  
   render() {
     const { data_cases } = this.state;
     return (
@@ -74,7 +44,7 @@ export default class SearchBox extends Component {
           <ReactSearchBox
             placeholder="States"
             value=""
-            data={this.data}
+            data={state_data}
             onSelect={(record) => console.log(record)}
             inputBoxFontColor="Red"
             dropDownHoverColor="grey"

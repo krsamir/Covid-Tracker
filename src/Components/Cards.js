@@ -61,7 +61,7 @@ export default function Cards({
               <Typography variant="h5" component="h2">
                 <CountUp
                   start={0}
-                  end={confirmed.value - recovered.value}
+                  end={confirmed.value - recovered.value-deaths.value}
                   duration={2.0}
                   separator=","
                 />

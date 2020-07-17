@@ -22,7 +22,7 @@ export const fetchData = async () => {
   }
 };
 
-/*
+
 export const fetchINDIA=async()=>{
     const urlc=`${url}/countries/INDIA/confirmed` 
     try{
@@ -41,6 +41,7 @@ export const fetchINDIA=async()=>{
         console.log(error)
     }
 }
+/*
 export const fetchDailyData = async()=>{
     try {
         const {data} = await axios.get(`${url}/daily`);
