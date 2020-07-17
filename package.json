@@ -14,7 +14,8 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "react-search-box": "^2.0.2"
+    "react-search-box": "^2.0.2",
+    "tachyons": "^4.12.0"
   },
   "homepage": "https://krsamir.github.io/Covid-Tracker/",
   "scripts": {
