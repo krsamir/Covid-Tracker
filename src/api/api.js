@@ -22,12 +22,12 @@ export const fetchData = async () => {
   }
 };
 
-/*
+
 export const fetchINDIA=async()=>{
-    const urlc=`${url}/countries/INDIA/confirmed` 
+    const url_India = `https://covid19.mathdro.id/api/countries/india/confirmed`;
     try{
-        const {dataI}= await axios.get(urlc);
-        const IndiaData=dataI.map((dataconf)=>({
+        const {data}= await axios.get(url_India);
+        const IndiaData=data.map((dataconf)=>({
             State: dataconf.provinceState,
             confirmed: dataconf.confirmed,
             recovered:dataconf.recovered,
@@ -35,12 +35,23 @@ export const fetchINDIA=async()=>{
             active:dataconf.active
             
         }))
-        return IndiaData;
+        console.log(IndiaData)
+        console.log("Inside API")
+        //const x = provinceState.map((state)=>state)  ;
+        let x=5
+        console.log(x)
+        return x;
     }
     catch(error){
         console.log(error)
     }
 }
+
+    const handlestatechange = async(state)=>{
+        await fetchINDIA();
+    } 
+    handlestatechange();
+/*
 export const fetchDailyData = async()=>{
     try {
         const {data} = await axios.get(`${url}/daily`);
