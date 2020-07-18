@@ -35,12 +35,7 @@ export const fetchINDIA=async()=>{
             active:dataconf.active
             
         }))
-        console.log(IndiaData)
-        console.log("Inside API")
-        //const x = provinceState.map((state)=>state)  ;
-        let x=5
-        console.log(x)
-        return x;
+        return IndiaData;
     }
     catch(error){
         console.log(error)

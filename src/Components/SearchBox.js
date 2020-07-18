@@ -3,8 +3,9 @@ import ReactSearchBox from "react-search-box";
 import styles from "./SearchBox.module.css";
 import date from "date-and-time";
 import Cards from "./Cards";
-import { fetchData } from "../api/api";
+import { fetchData,fetchINDIA } from "../api/api";
 import {state_data} from './state_list';
+import Statecomp from './state_comp';
 
 const date_time = () => {
   const now = new Date();
@@ -17,18 +18,18 @@ export default class SearchBox extends Component {
     super();
     this.state = {
       data_cases: {},
-      countryData: {},
+      countryData: [],
+      select: ''
     };
   }
   async componentDidMount() {
     try {
       const fetchedData = await fetchData();
-    // const indiaData=await fetchINDIA();
+      const indiaData=await fetchINDIA();
     this.setState({
-      data_cases: fetchedData
-      // countryData: indiaData
-    });
-      
+      data_cases: fetchedData,
+      countryData: indiaData
+    }); 
     } catch (error) {
       console.log(error);
     }
@@ -36,7 +37,7 @@ export default class SearchBox extends Component {
   }
   
   render() {
-    const { data_cases } = this.state;
+    const { data_cases,countryData } = this.state;
     return (
       <div className = 'tc flex flex-wrap justify-center'>
         <div className={styles.searchbox}>
@@ -45,14 +46,15 @@ export default class SearchBox extends Component {
             placeholder="States"
             value=""
             data={state_data}
-            onSelect={(record) => console.log(record)}
+            onSelect={(record) => this.setState({select:record})}
             inputBoxFontColor="Red"
             dropDownHoverColor="grey"
           />
           <label className={styles.date_time}>{date_time()}</label>
 
           <Cards data_cases={data_cases} /> 
-          {/* countryData={this.state.countryData}/> */}
+          <Statecomp countryData={countryData} />
+          {/*console.log(countryData)*/}
         </div>
       </div>
     );
