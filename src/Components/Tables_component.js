@@ -8,7 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import styles from "./Tables_component.module.css";
+//import styles from "./Tables_component.module.css";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -37,7 +37,7 @@ export default function StateTable({ countryData }) {
   const classes = useStyles();
   if (!countryData[0]) return <h1 className="tc red">LOADING</h1>;
   return (
-    <Grid className={styles.bigbang} container justify={"center"} item={"true"}>
+    <Grid container justify={"center"} item={"true"}>
       <h1>StateWise Data</h1>
       <TableContainer component={Paper}>
         <Table
