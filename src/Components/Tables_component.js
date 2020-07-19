@@ -33,7 +33,8 @@ const useStyles = makeStyles({
 
 export default function CustomizedTables({countryData}) {
   const classes = useStyles();
-
+  if (!countryData[0]) 
+        return <h1 className="tc red">LOADING</h1>;
   return (
     <div className='pa7'>
     <h1>StateWise Data</h1>
