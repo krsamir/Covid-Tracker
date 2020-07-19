@@ -5,11 +5,7 @@ import date from "date-and-time";
 import Cards from "./Cards";
 import { fetchData,fetchINDIA } from "../api/api";
 import {state_data} from './state_list';
-<<<<<<< HEAD
-import { fetchINDIA } from "../api/api";
-=======
 import Statecomp from './state_comp';
->>>>>>> d12d23e0607d9b79535d1410f6c6a7a2888671ed
 
 const date_time = () => {
   const now = new Date();
@@ -22,12 +18,9 @@ export default class SearchBox extends Component {
     super();
     this.state = {
       data_cases: {},
-<<<<<<< HEAD
       IndiaData: {},
-=======
       countryData: [],
       select: ''
->>>>>>> d12d23e0607d9b79535d1410f6c6a7a2888671ed
     };
   }
   async componentDidMount() {
@@ -75,13 +68,10 @@ export default class SearchBox extends Component {
           <label className={styles.date_time}>{date_time()}</label>
 
           <Cards data_cases={data_cases} /> 
-<<<<<<< HEAD
           {/* countryData={this.state.countryData}/> */}
           {/* <state_comp data = {IndiaData}/> */}
-=======
           <Statecomp countryData={countryData} />
           {/*console.log(countryData)*/}
->>>>>>> d12d23e0607d9b79535d1410f6c6a7a2888671ed
         </div>
       </div>
     );
