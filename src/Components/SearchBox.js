@@ -3,9 +3,9 @@ import ReactSearchBox from "react-search-box";
 import styles from "./SearchBox.module.css";
 import date from "date-and-time";
 import Cards from "./Cards";
-import { fetchData,fetchINDIA } from "../api/api";
-import {state_data} from './state_list';
-import Statecomp from './state_comp';
+import { fetchData, fetchINDIA } from "../api/api";
+import { state_data } from "./state_list";
+import CustomizedTables from "./Tables_component";
 
 const date_time = () => {
   const now = new Date();
@@ -20,59 +20,57 @@ export default class SearchBox extends Component {
       data_cases: {},
       IndiaData: {},
       countryData: [],
-      select: ''
+      select: "",
     };
   }
   async componentDidMount() {
     try {
       const fetchedData = await fetchData();
-      const indiaData=await fetchINDIA();
-    this.setState({
-      data_cases: fetchedData,
-      countryData: indiaData
-    }); 
+      const indiaData = await fetchINDIA();
+      this.setState({
+        data_cases: fetchedData,
+        countryData: indiaData,
+      });
     } catch (error) {
       console.log(error);
     }
 
-                  //API for India 
+    //API for India
     try {
       const IndiaDataApi = await fetchINDIA();
 
       this.setState({
-          IndiaData:IndiaDataApi
-      })
-      
+        IndiaData: IndiaDataApi,
+      });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-    
   }
 
-
-  
   render() {
-    const { data_cases,countryData } = this.state;
+    const { data_cases, countryData } = this.state;
     return (
-      <div className = 'tc flex flex-wrap justify-center'>
-        <div className={styles.searchbox}>
-          <label className={styles.label}>Search your city</label>
-          <ReactSearchBox
-            placeholder="States"
-            value=""
-            data={state_data}
-            onSelect={(record) => this.setState({select:record})}
-            inputBoxFontColor="Red"
-            dropDownHoverColor="grey"
-          />
-          <label className={styles.date_time}>{date_time()}</label>
+      <div>
+        <div className="tc flex flex-wrap justify-center">
+          <div className={styles.searchbox}>
+            <label className={styles.label}>Search your city</label>
+            <ReactSearchBox
+              placeholder="States"
+              value=""
+              data={state_data}
+              onSelect={(record) => this.setState({ select: record })}
+              inputBoxFontColor="Red"
+              dropDownHoverColor="grey"
+            />
+            <label className={styles.date_time}>{date_time()}</label>
 
-          <Cards data_cases={data_cases} /> 
-          {/* countryData={this.state.countryData}/> */}
-          {/* <state_comp data = {IndiaData}/> */}
-          <Statecomp countryData={countryData} />
-          {/*console.log(countryData)*/}
-        </div>
+            <Cards data_cases={data_cases} />
+            {/* countryData={this.state.countryData}/> */}
+            {/* <state_comp data = {IndiaData}/> */}
+            
+          </div>
+        </div> 
+        <CustomizedTables countryData = {countryData}/>
       </div>
     );
   }

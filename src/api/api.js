@@ -42,7 +42,7 @@ export const fetchINDIA=async()=>{
     }
 }
 
-    const handlestatechange = async(state)=>{
+    /*const handlestatechange = async(state)=>{
         await fetchINDIA();
     } 
     handlestatechange();
