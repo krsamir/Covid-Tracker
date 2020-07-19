@@ -18,7 +18,7 @@ export default function Cards({
   }
   return (
     <div>
-      <div className="flex justify-around" >
+      <div className="flex justify-around " >
         <Grid className={styles.gridbox} style={{position:'relative'}} >
           <Card className={styles.classes}>
             <CardContent>
