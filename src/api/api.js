@@ -35,8 +35,11 @@ export const fetchINDIA=async()=>{
             active:dataconf.active
             
         }))
+<<<<<<< HEAD
         console.log(IndiaData)
         console.log("Inside API")
+=======
+>>>>>>> d12d23e0607d9b79535d1410f6c6a7a2888671ed
         return IndiaData;
     }
     catch(error){
