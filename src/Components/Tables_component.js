@@ -37,7 +37,7 @@ export default function StateTable({ countryData }) {
   const classes = useStyles();
   if (!countryData[0]) return <h1 className="tc red">LOADING</h1>;
   return (
-    <Grid container justify={"center"} item={"true"}>
+    <Grid container justify={"center"} item={true}>
       <h1>StateWise Data</h1>
       <TableContainer component={Paper}>
         <Table
@@ -56,7 +56,7 @@ export default function StateTable({ countryData }) {
           </TableHead>
           <TableBody>
             {countryData.map((user, i) => (
-              <StyledTableRow key={countryData[i].State}>
+              <StyledTableRow key={i}>
                 <StyledTableCell component="th" scope="row">
                   {countryData[i].State ===
                   "Dadra and Nagar Haveli and Daman and Diu"
