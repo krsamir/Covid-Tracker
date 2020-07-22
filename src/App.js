@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { fetchData, fetchINDIA } from "./api/api";
 import StateTable from "./Components/Tables_component";
-import SpacingGrid from './Components/cardComponent';
+import Card from './Components/cardComponent';
+import Tabular from './Components/Tabular_data'
+import Paper from "@material-ui/core/Paper";
 
 export default class App extends Component{
     constructor() {
@@ -19,18 +21,21 @@ export default class App extends Component{
           this.setState({
             data_cases: fetchedData,
             countryData: indiaData,
-          });
+          })
         } catch (error) {
           console.log(error);
         }
       }
-    
-      render() {
-        const { data_cases, countryData } = this.state;
+
+        render() {
+        const { data_cases, countryData} = this.state;
+        
         return (
           <div>
-            <SpacingGrid data_cases={data_cases}/>
+          <Paper>
+            <Card data_cases={data_cases}/>
             <StateTable countryData = {countryData}/>
+            </Paper>
           </div>
         );
       }
