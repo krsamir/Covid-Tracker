@@ -1,25 +1,25 @@
 import React, { Component } from "react";
-import { fetchApiData, fetchINDIA } from "./api/api";
+import { fetchApiData, fetchDistrictApi} from "./api/api";
 import StateTable from "./Components/Tables_component";
 import Card from './Components/cardComponent';
-import Table2 from './Components/table2'
+// import Table2 from './Components/table2'
 // import Tabular from './Components/Tabular_data'
+import StateDistrictTable from './Components/stateDistrictTable.js'
+
 export default class App extends Component{
     constructor() {
         super();
         this.state = {
           fullData: [],
-          countryData: [],
           select: "",
         };
       }
       async componentDidMount() {
         try {
           const fetchedData = await fetchApiData();
-          const indiaData = await fetchINDIA();
+          await fetchDistrictApi();
           this.setState({
             fullData:fetchedData,
-            countryData: indiaData,
           })
         } catch (error) {
           console.log(error);
@@ -27,14 +27,15 @@ export default class App extends Component{
       }
  
         render() {
-        const { fullData, countryData} = this.state;
+        const { fullData} = this.state;
         
         return (
           <div>
             <Card fullData = {fullData}/>
-            {/* <Tabular/> */}
+            <StateDistrictTable/>
+            {/* <Tabular fullData={fullData}/> */}
             <StateTable  fullData = {fullData}/>
-            <Table2 fullData={fullData}/>
+            {/* <Table2 fullData={fullData}/> */}
             
           </div>
         );

@@ -9,7 +9,7 @@ export default function Tabular_data() {
       
           <Collapser>
             <Trigger>
-            <div className="tc dib br3 pa3 ma2 grow bw2 shadow-5">
+            <div className="tc dib br3 pa3  grow bw2 shadow-5 bg-light-green ">
             Maharashtra 
             </div>
             </Trigger>
@@ -24,7 +24,7 @@ export default function Tabular_data() {
       
           <Collapser>
             <Trigger>
-            <div className="tc dib br3 pa3 ma2 grow bw2 shadow-5">
+            <div className="tc dib br3 pa3 grow bw2 shadow-5 bg-light-green">
             Bihar 
             </div>
             </Trigger>
