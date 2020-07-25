@@ -1,11 +1,42 @@
 import React from "react";
-
-const Tabular_data = () => {
+import { Collapser, Trigger, Panel } from "react-collapser";
+import { Grid} from "@material-ui/core";
+import styles from "./Tabular_data.module.css";
+export default function Tabular_data() {
   return (
-    <div>
-      <h1>Tabular Data Page</h1>
+    <Grid>
+      <Grid className={styles.small_table}>
+      
+          <Collapser>
+            <Trigger>
+            <div className="tc dib br3 pa3 ma2 grow bw2 shadow-5">
+            Maharashtra 
+            </div>
+            </Trigger>
+            <Panel>
+            <div className="bg-silver tc dib br3 pa3 ma2  bw2 shadow-5">
+              Districts
+            </div></Panel>
+          </Collapser>
+      </Grid>
 
-    </div>
+      <Grid className={styles.small_table}>
+      
+          <Collapser>
+            <Trigger>
+            <div className="tc dib br3 pa3 ma2 grow bw2 shadow-5">
+            Bihar 
+            </div>
+            </Trigger>
+            <Panel>
+            <div className="bg-silver tc dib br3 pa3 ma2  bw2 shadow-5">
+              Patna
+            </div></Panel>
+          </Collapser>
+      </Grid>
+
+    
+    </Grid>
   );
-};
-export default Tabular_data;
+}
+//ref :https://www.npmjs.com/package/react-collapser

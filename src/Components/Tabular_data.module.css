@@ -1,1 +1,7 @@
- 
+ .small_table{
+     padding: 1px !important;
+ }
+ .paper_table{
+     width: 100px !important;
+     height:50px !important;
+ }
