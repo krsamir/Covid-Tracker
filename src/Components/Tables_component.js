@@ -33,9 +33,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StateTable({ countryData }) {
+export default function StateTable({ fullData }) {
   const classes = useStyles();
-  if (!countryData[0]) return <h1 className="tc red">LOADING</h1>;
+  if (!fullData[0]) return <h1 className="tc red">LOADING</h1>;
   return (
     <Grid container justify={"center"} item={true} className={styles.bigbang}>
       <h1>StateWise Data</h1>
@@ -55,27 +55,27 @@ export default function StateTable({ countryData }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {countryData.map((user, i) => (
+            {fullData.map((user, i) => (
               <StyledTableRow key={i}>
                 <StyledTableCell component="th" scope="row">
-                  {countryData[i].State ===
+                  {fullData[i].State ===
                   "Dadra and Nagar Haveli and Daman and Diu"
-                    ? (countryData[i].State = "Dadar Nagar Haveli")
-                    : countryData[i].State === "Andaman and Nicobar Islands"
-                    ? (countryData[i].State = "Andaman & Nicobar")
-                    : countryData[i].State}
+                    ? (fullData[i].state = "Dadar Nagar Haveli")
+                    : fullData[i].state === "Andaman and Nicobar Islands"
+                    ? (fullData[i].state = "Andaman & Nicobar")
+                    : fullData[i].state}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {countryData[i].confirmed}
+                  {fullData[i].confirmed}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {countryData[i].active}
+                  {fullData[i].active}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {countryData[i].recovered}
+                  {fullData[i].recovered}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {countryData[i].deaths}
+                  {fullData[i].deaths}
                 </StyledTableCell>
               </StyledTableRow>
             ))}

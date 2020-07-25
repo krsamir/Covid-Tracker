@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { fetchApiData, fetchINDIA } from "./api/api";
-// import StateTable from "./Components/Tables_component";
+import StateTable from "./Components/Tables_component";
 import Card from './Components/cardComponent';
 import Table2 from './Components/table2'
 // import Tabular from './Components/Tabular_data'
-
 export default class App extends Component{
     constructor() {
         super();
@@ -34,8 +33,9 @@ export default class App extends Component{
           <div>
             <Card fullData = {fullData}/>
             {/* <Tabular/> */}
+            <StateTable  fullData = {fullData}/>
             <Table2 fullData={fullData}/>
-            {/* <StateTable  countryData = {countryData}/>                       */}
+            
           </div>
         );
       }
