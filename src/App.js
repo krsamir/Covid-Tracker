@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { fetchApiData, fetchDistrictApi} from "./api/api";
-import StateTable from "./Components/Tables_component";
+//import TablesComponent from "./Components/Tables_component";
 import Card from './Components/cardComponent';
 // import Table2 from './Components/table2'
-// import Tabular from './Components/Tabular_data'
-import StateDistrictTable from './Components/stateDistrictTable.js'
+import Tabular from './Components/Tabular_data'
+// import StateDistrictTable from './Components/stateDistrictTable.js'
 
 export default class App extends Component{
     constructor() {
@@ -32,9 +32,9 @@ export default class App extends Component{
         return (
           <div>
             <Card fullData = {fullData}/>
-            <StateDistrictTable/>
-            {/* <Tabular fullData={fullData}/> */}
-            <StateTable  fullData = {fullData}/>
+            {/* <StateDistrictTable fullData={fullData}/> */}
+            <Tabular fullData={fullData}/>
+            {/* <TablesComponent fullData = {fullData}/> */}
             {/* <Table2 fullData={fullData}/> */}
             
           </div>

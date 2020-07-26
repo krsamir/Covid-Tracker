@@ -28,12 +28,12 @@ export const fetchApiData = async () => {
   }
 };
 
-const url2 = "https://api.covid19india.org/v4/data.json";
+const url2 = "https://api.covid19india.org/state_district_wise.json";
 
 export const fetchDistrictApi = async () => {
   try {
     const response2 = await axios.get(url2);
-    const responseData = response2.data.BR;
-    console.log(responseData);
+    const responseData = response2.data;
+    // console.log(responseData);
   } catch (error) {}
 };
