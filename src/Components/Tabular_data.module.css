@@ -14,16 +14,16 @@ table, th, td {
     background-color: #121212;
   }
   table{
-    padding: 2% !important;
+    padding-left: 2% !important;
 }
 .stateHeader{
-    width: 10% !important;
+    width: 70% !important;
     overflow-x: scroll;
 }
 
 @media(max-width:770px){
     .smallTable{
-        overflow-x: auto;
+        overflow-x: scroll;
         display: flex;
         justify-content: center ;
         padding-left: 25% !important;
@@ -31,11 +31,11 @@ table, th, td {
         margin-right: 10% !important;
     }
     .stateHeader{
-        width: 0% !important;
         overflow-x: scroll;
     }
     table{
-        padding-left: 15% !important;
+        padding-left: 10% !important;
+        padding-right: 5% !important;
     }
 
 }

@@ -34,6 +34,7 @@ export const fetchDistrictApi = async () => {
   try {
     const response2 = await axios.get(url2);
     const responseData = response2.data;
-    // console.log(responseData);
+    return (responseData)
+    
   } catch (error) {}
 };
