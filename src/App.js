@@ -4,14 +4,14 @@ import { fetchApiData, fetchDistrictApi } from "./api/api";
 import Card from "./Components/cardComponent";
 // import Table2 from './Components/table2'
 import Tabular from "./Components/Tabular_data";
-// import StateDistrictTable from './Components/stateDistrictTable.js'
+import DistrictCard from './Components/DistrictCard'
 export default class App extends Component {
-  constructor() {
+  constructor() { 
     super();
     this.state = {
       fullData: [],
       select: "",
-      DistrictData: {},
+      DistrictData:{},
     };
   }
   async componentDidMount() {
@@ -32,8 +32,8 @@ export default class App extends Component {
 
     return (
       <div>
+        <DistrictCard fullData={fullData} DistrictData={DistrictData}/>
         <Card fullData={fullData} />
-        {/* <StateDistrictTable fullData={fullData}/> */}
         <Tabular fullData={fullData} DistrictData={DistrictData} />
         {/* <TablesComponent fullData = {fullData}/> */}
         {/* <Table2 fullData={fullData}/> */}
