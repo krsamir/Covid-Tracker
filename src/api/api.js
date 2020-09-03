@@ -10,13 +10,13 @@ export const fetchApiData = async () => {
     //     statewise : dataX.statewise
     //   };
     const state_wise = dataX.statewise.map((data_num) => ({
-      active: data_num.active,
-      confirmed: data_num.confirmed,
-      recovered: data_num.recovered,
-      deaths: data_num.deaths,
-      deltaconfirmed: data_num.deltaconfirmed,
-      deltadeaths: data_num.deltadeaths,
-      deltarecovered: data_num.deltarecovered,
+      active: parseInt(data_num.active),
+      confirmed: parseInt(data_num.confirmed),
+      recovered: parseInt(data_num.recovered),
+      deaths: parseInt(data_num.deaths),
+      deltaconfirmed: parseInt(data_num.deltaconfirmed),
+      deltadeaths: parseInt(data_num.deltadeaths),
+      deltarecovered: parseInt(data_num.deltarecovered),
       lastupdatedtime: data_num.lastupdatedtime,
       state: data_num.state,
       statecode: data_num.statecode,

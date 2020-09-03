@@ -5,6 +5,7 @@ import Card from "./Components/cardComponent";
 // import Table2 from './Components/table2'
 import Tabular from "./Components/Tabular_data";
 import DistrictCard from './Components/DistrictCard'
+import CovidTable from './Components/CovidTable'
 export default class App extends Component {
   constructor() { 
     super();
@@ -32,9 +33,10 @@ export default class App extends Component {
 
     return (
       <div>
-        <DistrictCard fullData={fullData} DistrictData={DistrictData}/>
+        {/* <DistrictCard fullData={fullData} DistrictData={DistrictData}/> */}
         <Card fullData={fullData} />
-        <Tabular fullData={fullData} DistrictData={DistrictData} />
+        <CovidTable fullData={fullData} />
+        {/* <Tabular fullData={fullData} DistrictData={DistrictData} /> */}
         {/* <TablesComponent fullData = {fullData}/> */}
         {/* <Table2 fullData={fullData}/> */}
       </div>

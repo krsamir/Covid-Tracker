@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Collapser, Trigger, Panel } from "react-collapser";
 import { Grid, Card, Typography } from "@material-ui/core";
-import styles from "./Tabular_data.module.css";
+//import styles from "./Tabular_data.module.css";
 import cx from "classnames";
 import District from "./District";
 export default function Tabular_data({ fullData, DistrictData }) {
