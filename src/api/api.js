@@ -36,15 +36,15 @@ export const fetchDistrictApi = async () => {
     const responseData = response2.data;
     const arrays = Object.entries(responseData)
     const states = [];
-    const dist =[];
+    // const dist =[];
     for (let i =0;i<arrays.length;i++){
       states.push(arrays[i][0])
       // const distArray = Object.entries(arrays[i][1].districtData)
     }
-    const modifiedData={
-      states:states,
-      arrays:arrays
-    }
+    // const modifiedData={
+    //   states:states,
+    //   arrays:arrays
+    // }
     // console.log(arrays[5][1].districtData)
     return (responseData)
   } catch (error) {}
