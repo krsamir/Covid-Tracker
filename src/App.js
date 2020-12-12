@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchApiData, fetchDistrictApi } from "./api/api";
-import Card from "./Components/cardComponent";
+import Card from "./Component/cardComponent";
 import Table from "./Component/Table";
 import { useSpring, animated } from "react-spring";
 export default function App() {
