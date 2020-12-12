@@ -127,9 +127,9 @@ function Table(props) {
                       gridColumnEnd: "span 4",
                       backgroundColor: "white",
                       padding: "5px",
-                                            borderBottom: "1px solid gray",
+                      borderBottom: "1px solid gray",
                       borderRight: "1px solid gray",
-                      borderLeft:"1px solid gray"
+                      borderLeft: "1px solid gray",
                     }}
                   >
                     {place[0]}
@@ -139,7 +139,7 @@ function Table(props) {
                       gridColumnEnd: "span 2",
                       backgroundColor: "white",
                       padding: "5px",
-                                            borderBottom: "1px solid gray",
+                      borderBottom: "1px solid gray",
                       borderRight: "1px solid gray",
                     }}
                   >
@@ -150,7 +150,7 @@ function Table(props) {
                       gridColumnEnd: "span 2",
                       backgroundColor: "white",
                       padding: "5px",
-                                            borderBottom: "1px solid gray",
+                      borderBottom: "1px solid gray",
                       borderRight: "1px solid gray",
                     }}
                   >
@@ -161,7 +161,7 @@ function Table(props) {
                       gridColumnEnd: "span 2",
                       backgroundColor: "white",
                       padding: "5px",
-                                            borderBottom: "1px solid gray",
+                      borderBottom: "1px solid gray",
                       borderRight: "1px solid gray",
                     }}
                   >
@@ -172,7 +172,7 @@ function Table(props) {
                       gridColumnEnd: "span 2",
                       backgroundColor: "white",
                       padding: "5px",
-                                            borderBottom: "1px solid gray",
+                      borderBottom: "1px solid gray",
                       borderRight: "1px solid gray",
                     }}
                   >
