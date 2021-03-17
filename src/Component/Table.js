@@ -218,8 +218,9 @@ function Table(props) {
                 border: "none",
                 color: "red",
                 backgroundColor: "#DCDDDE",
-                padding: "5px",
+                padding: "10px",
                 borderRadius: "5px",
+                marginBottom: "30px",
               }}
             />
           </div>
@@ -237,10 +238,12 @@ function Table(props) {
                 gridColumnEnd: "span 4",
                 backgroundColor: "white",
                 padding: "5px",
-                borderBottom: "1px solid gray",
-                borderRight: "1px solid gray",
-                borderLeft: "1px solid gray",
-                borderRadius: "5px 0px 0px 0px",
+                border: "1px solid gray",
+                // borderTop: "1px solid gray",
+                // borderBottom: "1px solid gray",
+                // borderRight: "1px solid gray",
+                // borderLeft: "1px solid gray",
+                // borderRadius: "5px 0px 0px 0px",
               }}
             >
               State
@@ -251,6 +254,7 @@ function Table(props) {
                 backgroundColor: "white",
                 padding: "5px",
                 borderBottom: "1px solid gray",
+                borderTop: "1px solid gray",
                 borderRight: "1px solid gray",
               }}
             >
@@ -262,6 +266,7 @@ function Table(props) {
                 backgroundColor: "white",
                 padding: "5px",
                 borderBottom: "1px solid gray",
+                borderTop: "1px solid gray",
                 borderRight: "1px solid gray",
               }}
             >
@@ -272,6 +277,7 @@ function Table(props) {
                 gridColumnEnd: "span 2",
                 backgroundColor: "white",
                 padding: "5px",
+                borderTop: "1px solid gray",
                 borderBottom: "1px solid gray",
                 borderRight: "1px solid gray",
               }}
@@ -283,9 +289,10 @@ function Table(props) {
                 gridColumnEnd: "span 2",
                 backgroundColor: "white",
                 padding: "5px",
+                borderTop: "1px solid gray",
                 borderBottom: "1px solid gray",
                 borderRight: "1px solid gray",
-                borderRadius: "0px 5px 0px 0px",
+                // borderRadius: "0px 5px 0px 0px",
               }}
             >
               Death
